@@ -24,10 +24,6 @@ function App() {
     }
   }, [dispatch, error, message, isLoggedIn,status]);
 
-  // useEffect(() => {
-  //   dispatch(loadUser());
-  // }, [dispatch]);
-
   return (
     <>
       {isLoading ? (
