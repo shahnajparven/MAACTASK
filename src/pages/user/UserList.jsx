@@ -149,7 +149,7 @@ function UserList(){
               <Box display="flex">
                 <Box>
                   <Box display="flex" justifyContent="center" py={2}>
-                    <Typography variant="span" lineHeight={2.5} pr={4.6}>
+                    <Typography variant="span" lineHeight={2.5} pr={4.6} fontWeight={'bold'}>
                       First Name:{" "}
                     </Typography>
                     <Box py={1}>
@@ -170,7 +170,7 @@ function UserList(){
                     </Box>
                   </Box>
                   <Box display="flex" justifyContent="center" py={2}>
-                    <Typography variant="span" lineHeight={2.5} pr={4.6}>
+                    <Typography variant="span" lineHeight={2.5} pr={4.6} fontWeight={'bold'}>
                       Last Name:{" "}
                     </Typography>
                     <Box py={1}>
@@ -195,7 +195,7 @@ function UserList(){
               <Box display="flex">
                 <Box>
                   <Box display="flex" justifyContent="center" py={2}>
-                    <Typography variant="span" lineHeight={2.5} pr={3}>
+                    <Typography variant="span" lineHeight={2.5} pr={3} fontWeight={'bold'}>
                       Email:{" "}
                     </Typography>
                     <Box py={1}>
@@ -217,7 +217,7 @@ function UserList(){
                     </Box>
                   </Box>
                   <Box display="flex" justifyContent="center" py={2}>
-                    <Typography variant="span" lineHeight={2.5} pr={3}>
+                    <Typography variant="span" lineHeight={2.5} pr={3} fontWeight={'bold'}>
                       State:{" "}
                     </Typography>
                     <Box py={1}>
@@ -243,7 +243,7 @@ function UserList(){
               <Box display="flex">
                 <Box>
                   <Box display="flex" justifyContent="center" py={2}>
-                    <Typography variant="span" lineHeight={2.5} pr={3}>
+                    <Typography variant="span" lineHeight={2.5} pr={3} fontWeight={'bold'}>
                       Address:{" "}
                     </Typography>
                     <Box py={1}>
@@ -266,7 +266,7 @@ function UserList(){
                   </Box>
 
                   <Box display="flex" justifyContent="center" py={2}>
-                    <Typography variant="span" lineHeight={2.5} pr={3}>
+                    <Typography variant="span" lineHeight={2.5} pr={3} fontWeight={'bold'}>
                       Company:{" "}
                     </Typography>
                     <Box py={1}>
@@ -293,7 +293,7 @@ function UserList(){
               <Box display="flex">
                 <Box>
                   <Box display="flex" justifyContent="center" py={2}>
-                    <Typography variant="span" lineHeight={2.5} pr={3}>
+                    <Typography variant="span" lineHeight={2.5} pr={3} fontWeight={'bold'}>
                       City:{" "}
                     </Typography>
                     <Box py={1}>
@@ -319,6 +319,7 @@ function UserList(){
                       variant="contained"
                       type="submit"
                       sx={{
+                        fontWeight:'bold',
                         background: "#c2d2eb",
                         color: "black",
                         textTransform: "none",
@@ -341,6 +342,7 @@ function UserList(){
                         variant="outlined"
                         type="submit"
                         sx={{
+                          fontWeight:'bold',
                           borderColor: "#c2d2eb",
                           color: "black",
                           textTransform: "none",
