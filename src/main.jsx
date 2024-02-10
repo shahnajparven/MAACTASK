@@ -3,7 +3,6 @@ import App from "./App.jsx";
 import "./index.css";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
-import "react-toastify/dist/ReactToastify.css";
 import store from "./store/index.js";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
