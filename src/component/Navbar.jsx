@@ -1,79 +1,4 @@
-// import { Link } from "react-router-dom";
-// import logo from "../assets/logo.png";
-// import { Avatar, Box, Button, Divider, Typography } from "@mui/material";
-
-// const Navbar = () => {
-//   return (
-//     <>
-//       <Box
-//         className="container"
-//         display={"flex"}
-//         justifyContent={"space-between"}
-//       >
-//         <Link to="/" style={{ textDecoration: "none" }}>
-//           <Box py={3}  display={{ lg: "flex", md: "block", sm: "block", xs: "none" }}>
-//             <Typography variant="h5" fontWeight={"bold"}>
-//               Technext
-//             </Typography>
-//           </Box>
-//         </Link>
-//         <Box display={"flex"} gap={2.5} py={3}>
-//           <Link to="userlist" style={{ textDecoration: "none" }}>
-//             <Box>
-//               <Typography variant="h5" fontSize={18} sx={{ cursor: "pointer" }}>
-//                 User List
-//               </Typography>
-//             </Box>
-//           </Link>
-//           <Box>
-//             <Typography variant="h5" fontSize={18} sx={{ cursor: "pointer" }}>
-//               Add User
-//             </Typography>
-//           </Box>
-//         </Box>
-//         <Box
-//           justifyContent={"center"}
-//           alignItems={"center"}
-//           gap={2.5}
-//           p={3}
-//           display={{ lg: "flex", md: "block", sm: "block", xs: "none" }}
-//         >
-//           <Box>
-//             <Button
-//               variant="contained"
-//               sx={{
-//                 textTransform: "none",
-//               }}
-//             >
-//               Login
-//             </Button>
-//           </Box>
-//           <Box>
-//             <Button
-//               variant="outlined"
-//               sx={{
-//                 borderTop: 1,
-//                 borderRight: 3,
-//                 borderBottom: 3,
-//                 borderLeft: 1,
-//                 textTransform: "none",
-//               }}
-//             >
-//               Registration
-//             </Button>
-//           </Box>
-//         </Box>
-//         <Box display={{ lg: "none", md: "none", sm: "none", xs: "block" }} py={3}>
-//           <Avatar height={10} width={10} />
-//         </Box>
-//       </Box>
-//       <Divider color={"#C2D2EB"} />
-//     </>
-//   );
-// };
-
-// export default Navbar;
-
+/* eslint-disable react/jsx-key */
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -90,7 +15,6 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Link, Outlet } from "react-router-dom";
-import Banner from "../pages/Banner";
 
 const drawerWidth = 240;
 const navItems = [
@@ -131,7 +55,7 @@ function DrawerAppBar(props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Link to="/" style={{ textDecoration: "none" }}>
-        <Typography variant="h6" sx={{ my: 2 }} fontWeight={'bold'}>
+        <Typography variant="h6" sx={{ my: 2 }} fontWeight={"bold"}>
           Technext
         </Typography>
       </Link>
@@ -168,10 +92,10 @@ function DrawerAppBar(props) {
           <Typography
             variant="h6"
             component="div"
-            fontWeight={'bold'}
+            fontWeight={"bold"}
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            <Link to="/" style={{ textDecoration: "none", cursor: "pointer" }} >
+            <Link to="/" style={{ textDecoration: "none", cursor: "pointer" }}>
               Technext
             </Link>
           </Typography>
@@ -204,7 +128,6 @@ function DrawerAppBar(props) {
         </Drawer>
       </nav>
       <Box component="main" sx={{ p: 3 }}>
-        {/* <Toolbar /> */}
         <Box>
           <Outlet />
         </Box>
@@ -212,5 +135,4 @@ function DrawerAppBar(props) {
     </Box>
   );
 }
-
 export default DrawerAppBar;

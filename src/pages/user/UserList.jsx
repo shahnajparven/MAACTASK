@@ -14,7 +14,7 @@ import {
 } from "@mui/material";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addUser, fetchUsers, userCreate } from "../../store/user/usersSlice";
+import { addUser, fetchUsers } from "../../store/user/usersSlice";
 import Card from "../card/Card";
 import { Controller, FormProvider, useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
@@ -29,7 +29,7 @@ const schema = yup.object({
   address: yup.string(),
 });
 
-const UserList = () => {
+function UserList(){
   const dispatch = useDispatch();
   const { users } = useSelector((state) => state.user);
   console.log(users, "jkhj");
@@ -429,7 +429,7 @@ const UserList = () => {
         {result}
       </Box>
     </Box>
-  );
-};
+  )
+}
 
 export default UserList;

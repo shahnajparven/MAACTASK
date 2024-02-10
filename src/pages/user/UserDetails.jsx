@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import {  fetchUserDetails } from "../../store/user/usersSlice";
 import { Avatar, Box, Typography } from "@mui/material";
 
-const UserDetails = () => {
+function UserDetails () {
   const { id } = useParams();
   const dispatch = useDispatch();
   const { userDetails } = useSelector((state) => state.user);
@@ -21,7 +21,7 @@ const UserDetails = () => {
        <Typography>{userDetails.firstName} {" "}{userDetails.lastName}</Typography> 
       </Box>
     </Box>
-  );
-};
+  )
+}
 
 export default UserDetails;

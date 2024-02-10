@@ -13,7 +13,7 @@ const schema = yup.object({
   email: yup.string(),
 });
 
-const AddUser = () => {
+function AddUser() {
   // const [firstName,setFirstName]=useState('');
   // const [lastName,setLastName]=useState('');
   // const [email,setEmail]=useState('');
@@ -176,7 +176,7 @@ const AddUser = () => {
         </Box>
       </FormProvider>
     </Box>
-  );
-};
+  )
+}
 
 export default AddUser;

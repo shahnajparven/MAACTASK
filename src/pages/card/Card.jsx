@@ -1,7 +1,7 @@
 import { Avatar, Box, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
-const Card = ({ id,lastName,firstName,image,email,address,city,state,company}) => {
+function Card ({ id,lastName,firstName,image,email,address,city,state,company}) {
   return (
     <Box>
       <Link
@@ -41,7 +41,7 @@ const Card = ({ id,lastName,firstName,image,email,address,city,state,company}) =
         </Box>
       </Link>
     </Box>
-  );
-};
+  )
+}
 
 export default Card;

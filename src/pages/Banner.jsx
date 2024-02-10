@@ -1,7 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 
-const Banner = () => {
+function Banner () {
   return (
     <>
       <Box height={"auto"} className="banner">
@@ -64,7 +64,7 @@ const Banner = () => {
         </Box>
       </Box>
     </>
-  );
-};
+  )
+}
 
 export default Banner;

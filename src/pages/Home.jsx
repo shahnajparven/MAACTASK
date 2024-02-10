@@ -1,12 +1,12 @@
 import { Box } from "@mui/material";
 import Banner from "./Banner";
 
-const Home = () => {
+  function Home() {
   return (
     <Box>
       <Banner /> 
     </Box>
-  );
-};
+  )
+}
 
 export default Home;
