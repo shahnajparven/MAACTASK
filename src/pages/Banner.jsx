@@ -1,36 +1,68 @@
-import { Box, Button } from "@mui/material";
-import banner from "../assets/banner.png";
+import { Box, Button, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
     <>
-      <Box height={"auto"}>
-        <img height={"100%"} width={"100%"} overflow="hidden" src={banner} />
-      </Box>
-      <Box display={"flex"} justifyContent={"center"} gap={2}>
-        <Box>
-          <Button
-            variant="contained"
-            sx={{
-              textTransform: "none",
-            }}
+      <Box height={"auto"} className="banner">
+        <Box
+          py={17}
+          px={3}
+          display={"flex"}
+          justifyContent={"center"}
+          flexDirection={"column"}
+          alignItems={"center"}
+        >
+          <Typography
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            variant="h3"
+            fontWeight={"bold"}
           >
-            Login
-          </Button>
-        </Box>
-        <Box>
-          <Button
-            variant="outlined"
-            sx={{
-              borderTop: 1,
-              borderRight: 3,
-              borderBottom: 3,
-              borderLeft: 1,
-              textTransform: "none",
-            }}
+            Lorem ipsum dolor sit amet consectetur adipisicing.
+          </Typography>
+          <Box
+            display={"flex"}
+            justifyContent={"center"}
+            flexDirection={{lg:'row',md:"row",sm:'column',xs:'column'}}
+            gap={2}
+            py={10}
+            px={3}
           >
-            Registration
-          </Button>
+            <Link to="userlist" style={{ textDecoration: "none" }}>
+              <Box>
+                <Button
+                  variant="contained"
+                  sx={{
+                    height: 60,
+                    width: 200,
+                    
+                  }}
+                >
+                  User List
+                </Button>
+              </Box>
+            </Link>
+            <Link to="adduser" style={{ textDecoration: "none" }}>
+              <Box>
+                <Button
+                  variant="outlined"
+                  sx={{
+                    height: 60,
+                    width: 200,
+                    borderTop: 1,
+                    borderRight: 3,
+                    borderBottom: 3,
+                    borderLeft: 1,
+                    
+                  }}
+                >
+                  Add User
+                </Button>
+              </Box>
+            </Link>
+          </Box>
         </Box>
       </Box>
     </>

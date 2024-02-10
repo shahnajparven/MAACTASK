@@ -1,13 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Lato&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600;700&family=Lato&display=swap");
 :root {
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
-body{
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
-.container{
+.container {
   padding: 0 3rem 0 3rem;
+  overflow: hidden;
+}
+
+.banner {
+  background-image: url(./assets/banner.png);
+  height: 100vh;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+.searchBar {
+  width: 50%;
+  height: 8vh;
+  padding-left: 8px;
+  border: 1px solid #c2d2eb;
+}
+.searchBar:focus {
+  outline: none;
+}
+.inputarea {
+  width: 30%;
+  height: 8vh;
+  padding-left: 8px;
+}
+.inputarea:focus {
+  outline: none;
+}
+.inputlabel {
+  width: 100%;
+}
+.tolbar {
+  background-color: #ffff;
+  height: 12vh;
+  z-index: 0 !important;
+}
+.appbar {
+
+  /* box-shadow: none !important; */
 }
