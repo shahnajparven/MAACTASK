@@ -6,10 +6,7 @@ export const userCreate = createAsyncThunk(
   "user/userCreate",
   async (user, { rejectWithValue, fulfillWithValue }) => {
     try {
-      const { data } = await axios.post(
-        "https://dummyjson.com/users",
-        user
-      );
+      const { data } = await axios.post("https://dummyjson.com/users/add", user);
       console.log(data, "backend");
       return fulfillWithValue(data.message);
     } catch (error) {
@@ -20,9 +17,9 @@ export const userCreate = createAsyncThunk(
 
 export const fetchUsers = createAsyncThunk(
   "user/fetchUsers",
-  async ( user, { rejectWithValue, fulfillWithValue }) => {
+  async (user, { rejectWithValue, fulfillWithValue }) => {
     try {
-      const { data } = await axios.get('https://dummyjson.com/users');
+      const { data } = await axios.get("https://dummyjson.com/users");
       return fulfillWithValue(data.users || data.message);
     } catch (error) {
       return rejectWithValue(error?.response?.data.message || "Unknown Error");
@@ -88,7 +85,7 @@ export const usersSlice = createSlice({
       state.users = [];
       state.error = action.payload;
     });
-    
+
     // fetch user details
     builder.addCase(fetchUserDetails.pending, (state) => {
       state.isLoading = true;
@@ -105,5 +102,12 @@ export const usersSlice = createSlice({
       state.error = action.payload;
     });
   },
+  reducers: {
+    // add data
+    addUser: (state, action) => {
+      state.users.push(action.payload);
+    },
+  },
 });
+export const { addUser } = usersSlice.actions;
 export default usersSlice.reducer;

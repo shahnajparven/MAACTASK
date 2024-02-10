@@ -25,7 +25,7 @@ const Banner = () => {
           <Box
             display={"flex"}
             justifyContent={"center"}
-            flexDirection={{lg:'row',md:"row",sm:'column',xs:'column'}}
+            flexDirection={{ lg: "row", md: "row", sm: "column", xs: "column" }}
             gap={2}
             py={10}
             px={3}
@@ -37,14 +37,13 @@ const Banner = () => {
                   sx={{
                     height: 60,
                     width: 200,
-                    
                   }}
                 >
                   User List
                 </Button>
               </Box>
             </Link>
-            <Link to="adduser" style={{ textDecoration: "none" }}>
+            <Link to="/" style={{ textDecoration: "none" }}>
               <Box>
                 <Button
                   variant="outlined"
@@ -55,7 +54,6 @@ const Banner = () => {
                     borderRight: 3,
                     borderBottom: 3,
                     borderLeft: 1,
-                    
                   }}
                 >
                   Add User

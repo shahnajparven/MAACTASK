@@ -4,7 +4,7 @@ import { Box, Button, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { userCreate } from "../../store/user/usersSlice";
+import { addUser, userCreate } from "../../store/user/usersSlice";
 import { Controller, FormProvider, useForm } from "react-hook-form";
 
 const schema = yup.object({
@@ -14,6 +14,10 @@ const schema = yup.object({
 });
 
 const AddUser = () => {
+  // const [firstName,setFirstName]=useState('');
+  // const [lastName,setLastName]=useState('');
+  // const [email,setEmail]=useState('');
+
   const dispatch = useDispatch();
 
   const form = useForm({
@@ -24,7 +28,7 @@ const AddUser = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    dispatch(userCreate(data));
+    dispatch(addUser(data));
   };
   return (
     <Box className="container" mt={5}>
@@ -79,7 +83,7 @@ const AddUser = () => {
             </Box>
             <Box display="flex" justifyContent="center" py={2}>
               <Typography variant="span" lineHeight={2.5} pr={3}>
-                Password:{" "}
+                Email:{" "}
               </Typography>
               <Box py={1}>
                 <Controller
@@ -99,6 +103,28 @@ const AddUser = () => {
                 />
               </Box>
             </Box>
+            {/* <Box display="flex" justifyContent="center" py={2}>
+              <Typography variant="span" lineHeight={2.5} pr={3}>
+                Email:{" "}
+              </Typography>
+              <Box py={1}>
+                <Controller
+                  name="company"
+                  control={control}
+                  render={({ field }) => (
+                    <Box minWidth={150}>
+                      <TextField
+                        // color="#c2d2eb"
+                        id="standard-error-helper-text"
+                        placeholder="Enter Your email"
+                        variant="standard"
+                        {...field}
+                      />
+                    </Box>
+                  )}
+                />
+              </Box>
+            </Box> */}
 
             <Box display="flex" justifyContent="center" gap={2}>
               <Button
