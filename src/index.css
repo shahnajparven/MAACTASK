@@ -20,7 +20,7 @@ body {
   background-position: center;
 }
 .searchBar {
-  width: 50%;
+  width: 100%;
   height: 8vh;
   padding-left: 8px;
   border: 1px solid #c2d2eb;

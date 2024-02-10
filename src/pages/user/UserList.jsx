@@ -29,7 +29,7 @@ const schema = yup.object({
   address: yup.string(),
 });
 
-function UserList(){
+function UserList() {
   const dispatch = useDispatch();
   const { users } = useSelector((state) => state.user);
   console.log(users, "jkhj");
@@ -145,11 +145,16 @@ function UserList(){
         </Typography>
         <FormProvider {...form}>
           <Box component="form" onSubmit={handleSubmit(onSubmit)}>
-            <Box width={"100%"} display="flex" py={2}>
+            <Box width={"100%"} display="flex" flexWrap={"wrap"} py={2}>
               <Box display="flex">
                 <Box>
                   <Box display="flex" justifyContent="center" py={2}>
-                    <Typography variant="span" lineHeight={2.5} pr={4.6} fontWeight={'bold'}>
+                    <Typography
+                      variant="span"
+                      lineHeight={2.5}
+                      pr={{lg:3,md:2,xs:.5}}
+                      fontWeight={"bold"}
+                    >
                       First Name:{" "}
                     </Typography>
                     <Box py={1}>
@@ -170,7 +175,12 @@ function UserList(){
                     </Box>
                   </Box>
                   <Box display="flex" justifyContent="center" py={2}>
-                    <Typography variant="span" lineHeight={2.5} pr={4.6} fontWeight={'bold'}>
+                    <Typography
+                      variant="span"
+                      lineHeight={2.5}
+                      pr={{lg:3,md:2,xs:.5}}
+                      fontWeight={"bold"}
+                    >
                       Last Name:{" "}
                     </Typography>
                     <Box py={1}>
@@ -195,7 +205,12 @@ function UserList(){
               <Box display="flex">
                 <Box>
                   <Box display="flex" justifyContent="center" py={2}>
-                    <Typography variant="span" lineHeight={2.5} pr={3} fontWeight={'bold'}>
+                    <Typography
+                      variant="span"
+                      lineHeight={2.5}
+                      pr={3}
+                      fontWeight={"bold"}
+                    >
                       Email:{" "}
                     </Typography>
                     <Box py={1}>
@@ -217,7 +232,12 @@ function UserList(){
                     </Box>
                   </Box>
                   <Box display="flex" justifyContent="center" py={2}>
-                    <Typography variant="span" lineHeight={2.5} pr={3} fontWeight={'bold'}>
+                    <Typography
+                      variant="span"
+                      lineHeight={2.5}
+                      pr={3}
+                      fontWeight={"bold"}
+                    >
                       State:{" "}
                     </Typography>
                     <Box py={1}>
@@ -243,7 +263,12 @@ function UserList(){
               <Box display="flex">
                 <Box>
                   <Box display="flex" justifyContent="center" py={2}>
-                    <Typography variant="span" lineHeight={2.5} pr={3} fontWeight={'bold'}>
+                    <Typography
+                      variant="span"
+                      lineHeight={2.5}
+                      pr={3}
+                      fontWeight={"bold"}
+                    >
                       Address:{" "}
                     </Typography>
                     <Box py={1}>
@@ -266,7 +291,12 @@ function UserList(){
                   </Box>
 
                   <Box display="flex" justifyContent="center" py={2}>
-                    <Typography variant="span" lineHeight={2.5} pr={3} fontWeight={'bold'}>
+                    <Typography
+                      variant="span"
+                      lineHeight={2.5}
+                      pr={3}
+                      fontWeight={"bold"}
+                    >
                       Company:{" "}
                     </Typography>
                     <Box py={1}>
@@ -293,7 +323,12 @@ function UserList(){
               <Box display="flex">
                 <Box>
                   <Box display="flex" justifyContent="center" py={2}>
-                    <Typography variant="span" lineHeight={2.5} pr={3} fontWeight={'bold'}>
+                    <Typography
+                      variant="span"
+                      lineHeight={2.5}
+                      pr={3}
+                      fontWeight={"bold"}
+                    >
                       City:{" "}
                     </Typography>
                     <Box py={1}>
@@ -319,7 +354,7 @@ function UserList(){
                       variant="contained"
                       type="submit"
                       sx={{
-                        fontWeight:'bold',
+                        fontWeight: "bold",
                         background: "#c2d2eb",
                         color: "black",
                         textTransform: "none",
@@ -342,7 +377,7 @@ function UserList(){
                         variant="outlined"
                         type="submit"
                         sx={{
-                          fontWeight:'bold',
+                          fontWeight: "bold",
                           borderColor: "#c2d2eb",
                           color: "black",
                           textTransform: "none",
@@ -380,8 +415,14 @@ function UserList(){
         All Users
       </Typography>
 
-      <Box py={4} display="flex" justifyContent="space-between">
-        <Box width={"100%"} pl={13}>
+      <Box
+        py={4}
+        display="flex"
+        justifyContent="space-between"
+        gap={2}
+        flexDirection={{ lg: "row", md: "row", sm: "column", xs: "column" }}
+      >
+        <Box width={{lg:'50%',md:'50%',sm:"100%",xs:'100%'}} pl={{lg:13,md:10,sm:0,xs:0}}>
           <input
             className="searchBar"
             type="text"
@@ -390,9 +431,9 @@ function UserList(){
             placeholder="Search a user..."
           />
         </Box>
-        <Box pr={13}>
-          <Box minWidth={50}>
-            <FormControl fullWidth>
+        <Box pr={13} >
+          <Box minWidth={150}>
+            <FormControl>
               <InputLabel id="thrOfficeName-label" sx={{ fontSize: "12px" }}>
                 Sort By
               </InputLabel>
@@ -431,7 +472,7 @@ function UserList(){
         {result}
       </Box>
     </Box>
-  )
+  );
 }
 
 export default UserList;
